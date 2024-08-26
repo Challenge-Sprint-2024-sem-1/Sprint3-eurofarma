@@ -1,0 +1,414 @@
+"'Tela Inicial' As screen":
+    Fill: =Color.White
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+    OnVisible: =Reset(Email)
+
+    rodape1 As groupContainer.horizontalAutoLayoutContainer:
+        Fill: =RGBA(1, 27, 57, 1)
+        Height: =50
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+        LayoutMode: =LayoutMode.Auto
+        PaddingLeft: =50
+        PaddingRight: =50
+        RadiusBottomLeft: =
+        RadiusBottomRight: =
+        RadiusTopLeft: =
+        RadiusTopRight: =
+        Width: =1920
+        Y: =1030
+        ZIndex: =1
+
+        TextCanvas5 As Texto:
+            AlignInContainer: =AlignInContainer.Stretch
+            DisplayMode: =DisplayMode.Edit
+            FillPortions: =0.5
+            FontColor: =RGBA(255, 199, 0, 1)
+            FontUnderline: =true
+            Height: =32
+            LayoutMinHeight: =32
+            LayoutMinWidth: =96
+            Size: =26
+            Text: ="FALE CONOSCO"
+            Width: =96
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+        TextCanvas5_1 As Texto:
+            Align: ='TextCanvas.Align'.End
+            AlignInContainer: =AlignInContainer.Stretch
+            DisplayMode: =DisplayMode.Edit
+            FillPortions: =0.5
+            FontColor: =RGBA(255, 199, 0, 1)
+            Height: =32
+            LayoutMinHeight: =32
+            LayoutMinWidth: =96
+            Size: =26
+            Text: ="© EuroWelcome - 2024"
+            Width: =96
+            X: =0
+            Y: =0
+            ZIndex: =2
+
+    "'Fundo base' As groupContainer.horizontalAutoLayoutContainer":
+        Height: =1030
+        LayoutMode: =LayoutMode.Auto
+        RadiusBottomLeft: =
+        RadiusBottomRight: =
+        RadiusTopLeft: =
+        RadiusTopRight: =
+        Width: =1920
+        ZIndex: =2
+
+        Logo As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0.7
+            Height: =1080
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =
+            RadiusBottomRight: =
+            RadiusTopLeft: =
+            RadiusTopRight: =
+            Width: =1920
+            ZIndex: =1
+
+            "'Barra superior_3' As groupContainer.horizontalAutoLayoutContainer":
+                FillPortions: =0
+                Height: =100
+                LayoutMinHeight: =100
+                LayoutMinWidth: |
+                    =Parent.Width - 100
+                LayoutMode: =LayoutMode.Auto
+                PaddingLeft: =Parent.Width - (Parent.Width - 20)
+                RadiusBottomLeft: =
+                RadiusBottomRight: =
+                RadiusTopLeft: =
+                RadiusTopRight: =
+                Width: =1920
+                ZIndex: =1
+
+            Conteudo As groupContainer.horizontalAutoLayoutContainer:
+                Height: =100
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutJustifyContent: =LayoutJustifyContent.End
+                LayoutMinHeight: =100
+                LayoutMinWidth: |
+                    =Parent.Width - 100
+                LayoutMode: =LayoutMode.Auto
+                PaddingBottom: =70
+                RadiusBottomLeft: =
+                RadiusBottomRight: =
+                RadiusTopLeft: =
+                RadiusTopRight: =
+                Width: =1920
+                ZIndex: =2
+
+                Container3_1 As groupContainer.manualLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    FillPortions: =0.3
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    ZIndex: =1
+
+                Image1 As image:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    FillPortions: =0.4
+                    Height: =80
+                    Image: ='Group 6'
+                    Width: |
+                        =Parent.Width-500
+                    ZIndex: =2
+
+                TextCanvas2 As Texto:
+                    Align: ='TextCanvas.Align'.Center
+                    DisplayMode: =DisplayMode.Edit
+                    FillPortions: =0.4
+                    Height: =100
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =96
+                    Size: =32
+                    Text: |-
+                        ="Para continuar precisamos das
+                        seguintes informações!"
+                    Width: |+
+                        =Parent.Width-200
+                        
+                    X: =0
+                    Y: =0
+                    ZIndex: =3
+
+                TextCanvas3 As Texto:
+                    Align: ='TextCanvas.Align'.Center
+                    DisplayMode: =DisplayMode.Edit
+                    FillPortions: =0.1
+                    FontColor: =RGBA(39, 113, 194, 1)
+                    FontUnderline: =true
+                    Height: =32
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =96
+                    Size: =20
+                    Text: ="Preciso de Ajuda"
+                    Width: |
+                        =Parent.Width - 200
+                    X: =0
+                    Y: =0
+                    ZIndex: =4
+
+                Container3 As groupContainer.manualLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    Height: =520
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    ZIndex: =5
+
+                ButtonCanvas1_2 As Botão:
+                    Align: =Align.Center
+                    Appearance: ='ButtonCanvas.Appearance'.Secondary
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    BorderRadiusBottomLeft: =20
+                    BorderRadiusBottomRight: =20
+                    BorderRadiusTopLeft: =20
+                    BorderRadiusTopRight: =20
+                    BorderThickness: =1
+                    DisplayMode: =DisplayMode.Edit
+                    FillPortions: =0.13
+                    FontSize: |
+                        =28
+                    Height: =Parent.Height - 50
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =96
+                    OnSelect: |
+                        =Reset(Email)
+                    Text: ="Sair"
+                    Width: =Parent.Width - 550
+                    X: =0
+                    Y: =0
+                    ZIndex: =6
+
+        Formulário As groupContainer.horizontalAutoLayoutContainer:
+            Fill: =RGBA(2, 41, 86, 1)
+            Height: =1080
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =
+            RadiusBottomRight: =
+            RadiusTopLeft: =
+            RadiusTopRight: =
+            Width: =1920
+            ZIndex: =2
+
+            "'Barra superior' As groupContainer.horizontalAutoLayoutContainer":
+                FillPortions: =0
+                Height: =100
+                LayoutJustifyContent: =LayoutJustifyContent.End
+                LayoutMinHeight: =100
+                LayoutMinWidth: |
+                    =Parent.Width - 100
+                LayoutMode: =LayoutMode.Auto
+                PaddingRight: =Parent.Width - (Parent.Width - 50)
+                RadiusBottomLeft: =
+                RadiusBottomRight: =
+                RadiusTopLeft: =
+                RadiusTopRight: =
+                Width: =1920
+                ZIndex: =1
+
+                Icon1 As Ícone:
+                    AlignInContainer: =AlignInContainer.Center
+                    DisplayMode: =DisplayMode.Edit
+                    Height: |
+                        =Parent.Height
+                    Icon: ="Person"
+                    IconColor: =RGBA(255, 199, 0, 1)
+                    IconStyle: ='Icon.IconStyle'.Filled
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =32
+                    Width: =50
+                    X: =0
+                    Y: =0
+                    ZIndex: =1
+
+            campos As groupContainer.horizontalAutoLayoutContainer:
+                Height: =100
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutGap: =15
+                LayoutJustifyContent: =LayoutJustifyContent.Center
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                PaddingLeft: =50
+                PaddingRight: =50
+                RadiusBottomLeft: =
+                RadiusBottomRight: =
+                RadiusTopLeft: =
+                RadiusTopRight: =
+                Width: =1920
+                ZIndex: =2
+
+                TextCanvas1 As Texto:
+                    Align: ='TextCanvas.Align'.Center
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =RGBA(255, 199, 0, 1)
+                    Height: =100
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =96
+                    Size: =40
+                    Text: ="Validação de Entrada"
+                    Width: |
+                        =Parent.Width - 100
+                    X: =0
+                    Y: =0
+                    ZIndex: =1
+
+                "'Barra superior_4' As groupContainer.horizontalAutoLayoutContainer":
+                    FillPortions: =0.1
+                    Height: =100
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutGap: =5
+                    LayoutMinHeight: =130
+                    LayoutMinWidth: =Parent.Width - 100
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingLeft: |
+                        =0
+                    RadiusBottomLeft: =
+                    RadiusBottomRight: =
+                    RadiusTopLeft: =
+                    RadiusTopRight: =
+                    Width: =1920
+                    ZIndex: =2
+
+                    TextCanvas11 As Texto:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        AutoHeight: =true
+                        DisplayMode: =DisplayMode.Edit
+                        FontColor: =RGBA(255, 199, 0, 1)
+                        Height: =32
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
+                        Size: =28
+                        Text: ="Email corporativo"
+                        Width: =Parent.Width
+                        X: =0
+                        Y: =0
+                        ZIndex: =1
+
+                    "Email As 'Entrada de texto'":
+                        AlignInContainer: =AlignInContainer.Stretch
+                        DisplayMode: =DisplayMode.Edit
+                        FontSize: =24
+                        Height: =60
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =320
+                        Placeholder: ="usuario@eurofarma.com"
+                        Width: =320
+                        X: =0
+                        Y: =0
+                        ZIndex: =2
+
+                espaçamento As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0.85
+                    Height: =70
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =
+                    RadiusBottomRight: =
+                    RadiusTopLeft: =
+                    RadiusTopRight: =
+                    Width: =1920
+                    ZIndex: =3
+
+                botoes As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =100
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutGap: =25
+                    LayoutJustifyContent: =LayoutJustifyContent.End
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: |
+                        =Parent.Width - 100
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =
+                    RadiusBottomRight: =
+                    RadiusTopLeft: =
+                    RadiusTopRight: =
+                    Width: =1920
+                    ZIndex: =4
+
+                    "'Barra superior_1' As groupContainer.horizontalAutoLayoutContainer":
+                        FillPortions: =1.5
+                        Height: =100
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =
+                        RadiusBottomRight: =
+                        RadiusTopLeft: =
+                        RadiusTopRight: =
+                        Width: =1920
+                        ZIndex: =1
+
+                    ButtonCanvas1 As Botão:
+                        Align: =Align.Center
+                        Appearance: ='ButtonCanvas.Appearance'.Secondary
+                        BorderRadiusBottomLeft: =20
+                        BorderRadiusBottomRight: =20
+                        BorderRadiusTopLeft: =20
+                        BorderRadiusTopRight: =20
+                        DisplayMode: =DisplayMode.Edit
+                        FillPortions: =0.5
+                        FontSize: |
+                            =28
+                        Height: =Parent.Height - 50
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
+                        OnSelect: |+
+                            =Reset(Email)
+                            
+                        Text: ="Limpar"
+                        Width: =96
+                        X: =0
+                        Y: =0
+                        ZIndex: =2
+
+                    ButtonCanvas1_1 As Botão:
+                        Align: =Align.Center
+                        Appearance: ='ButtonCanvas.Appearance'.Secondary
+                        BorderRadiusBottomLeft: =20
+                        BorderRadiusBottomRight: =20
+                        BorderRadiusTopLeft: =20
+                        BorderRadiusTopRight: =20
+                        DisplayMode: |+
+                            =If(Email.Value <> First(Usuarios).Email, DisplayMode.Disabled, DisplayMode.Edit)
+                            
+                            
+                        FillPortions: =0.5
+                        FontSize: |
+                            =28
+                        Height: =Parent.Height - 50
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
+                        OnSelect: =Navigate('Tela de cursos')
+                        Text: ="Avançar"
+                        Width: =96
+                        X: =0
+                        Y: =0
+                        ZIndex: =3
+

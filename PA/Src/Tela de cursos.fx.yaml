@@ -1,0 +1,437 @@
+"'Tela de cursos' As screen":
+    Fill: =Color.White
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+
+    "'Fundo base_2' As groupContainer.horizontalAutoLayoutContainer":
+        Height: =1080
+        LayoutMode: =LayoutMode.Auto
+        RadiusBottomLeft: =
+        RadiusBottomRight: =
+        RadiusTopLeft: =
+        RadiusTopRight: =
+        Width: =1920
+        ZIndex: =2
+
+        barra_lateral As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0.3
+            Height: =1080
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =
+            RadiusBottomRight: =
+            RadiusTopLeft: =
+            RadiusTopRight: =
+            Width: =1920
+            ZIndex: =1
+
+            Conteudo_1 As groupContainer.horizontalAutoLayoutContainer:
+                Fill: =RGBA(2, 41, 86, 1)
+                Height: =100
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: |
+                    =0
+                LayoutMode: =LayoutMode.Auto
+                PaddingLeft: =20
+                PaddingRight: =20
+                RadiusBottomLeft: =
+                RadiusBottomRight: =
+                RadiusTopLeft: =
+                RadiusTopRight: =
+                Width: =1920
+                ZIndex: =2
+
+                barra_superior As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =100
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutGap: =10
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: |
+                        =0
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =
+                    RadiusBottomRight: =
+                    RadiusTopLeft: =
+                    RadiusTopRight: =
+                    Width: =1920
+                    ZIndex: =1
+
+                    Avatar1 As Avatar:
+                        Badge: ='Avatar.Badge'.None
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =64
+                        Image: =User().Image
+                        LayoutMinHeight: =64
+                        LayoutMinWidth: =64
+                        Name: =User().FullName
+                        Width: =64
+                        X: =15
+                        Y: =20
+                        ZIndex: =1
+
+                    barra_superior_1 As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.Center
+                        Height: =100
+                        LayoutAlignItems: =LayoutAlignItems.Stretch
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutJustifyContent: =LayoutJustifyContent.Center
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: |
+                            =0
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =
+                        RadiusBottomRight: =
+                        RadiusTopLeft: =
+                        RadiusTopRight: =
+                        Width: =1920
+                        ZIndex: =3
+
+                        TextCanvas4_2 As Texto:
+                            AutoHeight: =false
+                            DisplayMode: =DisplayMode.Edit
+                            FontColor: =RGBA(255, 255, 255, 1)
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Size: =20
+                            Text: =First(Usuarios).Nome
+                            Width: =96
+                            X: =0
+                            Y: =0
+                            ZIndex: =1
+
+                        barra_superior_2 As groupContainer.horizontalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.SetByContainer
+                            FillPortions: =0
+                            Height: =40
+                            LayoutAlignItems: =LayoutAlignItems.Stretch
+                            LayoutJustifyContent: =LayoutJustifyContent.Center
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: |
+                                =0
+                            LayoutMode: =LayoutMode.Auto
+                            RadiusBottomLeft: =
+                            RadiusBottomRight: =
+                            RadiusTopLeft: =
+                            RadiusTopRight: =
+                            Width: =1920
+                            ZIndex: =2
+
+                            TextCanvas4_3 As Texto:
+                                AutoHeight: =true
+                                DisplayMode: =DisplayMode.Edit
+                                FillPortions: =1
+                                FontColor: =RGBA(255, 255, 255, 1)
+                                Height: =32
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =96
+                                Size: =16
+                                Text: =First(Usuarios).Cargo
+                                Width: =96
+                                X: =0
+                                Y: =0
+                                ZIndex: =1
+
+                            TextCanvas4_4 As Texto:
+                                AutoHeight: =true
+                                DisplayMode: =DisplayMode.Edit
+                                FillPortions: =1
+                                FontColor: =RGBA(255, 255, 255, 1)
+                                Height: =32
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =96
+                                Size: =16
+                                Text: =First(Usuarios).Area
+                                Width: =96
+                                X: =0
+                                Y: =0
+                                ZIndex: =2
+
+                Rectangle3 As rectangle:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    Fill: =RGBA(139, 154, 159, 1)
+                    Height: =2
+                    Width: =Parent.Width - Parent.PaddingLeft * 2
+                    ZIndex: =2
+
+                lista_vertical As groupContainer.horizontalAutoLayoutContainer:
+                    Height: =100
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutGap: =10
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: |
+                        =0
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =
+                    RadiusBottomRight: =
+                    RadiusTopLeft: =
+                    RadiusTopRight: =
+                    Width: =1920
+                    ZIndex: =3
+
+                    TextCanvas4_1 As Texto:
+                        Align: ='TextCanvas.Align'.Center
+                        AutoHeight: =true
+                        DisplayMode: =DisplayMode.Edit
+                        FontColor: =RGBA(255, 199, 0, 1)
+                        Height: =50
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
+                        Size: =24
+                        Text: |-
+                            ="Sua Trilha:"
+                        VerticalAlign: ='TextCanvas.VerticalAlign'.Bottom
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =Parent.Width
+                        X: =0
+                        Y: =0
+                        ZIndex: =1
+
+                    "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
+                        BorderColor: =App.Theme.Colors.Darker40
+                        DelayItemLoading: =true
+                        Items: =Cursos
+                        Layout: =Layout.Vertical
+                        LayoutMinHeight: =287
+                        LayoutMinWidth: =320
+                        LoadingSpinner: =LoadingSpinner.Data
+                        TemplatePadding: =0
+                        TemplateSize: =130
+                        Width: =Parent.Width
+                        ZIndex: =2
+
+                        Title2 As label:
+                            Color: =RGBA(255, 255, 255, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Font: =App.Theme.Font
+                            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                            Height: =25
+                            OnSelect: =Select(Parent)
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: =ThisItem.Titulo
+                            VerticalAlign: =VerticalAlign.Top
+                            Width: =385
+                            X: =16
+                            Y: =9
+                            ZIndex: =1
+
+                        Subtitle2 As label:
+                            Color: =RGBA(139, 154, 159, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Font: =App.Theme.Font
+                            Height: =57
+                            OnSelect: =Select(Parent)
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =12
+                            Text: =ThisItem.Descricao
+                            VerticalAlign: =VerticalAlign.Top
+                            Width: =Title2.Width
+                            X: =16
+                            Y: =37
+                            ZIndex: =2
+
+                        NextArrow2 As icon.ChevronRight:
+                            AccessibleLabel: =Self.Tooltip
+                            BorderColor: =App.Theme.Colors.Darker40
+                            Color: =RGBA(166, 166, 166, 1)
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledColor: =RGBA(244, 244, 244, 1)
+                            Height: =50
+                            Icon: =Icon.ChevronRight
+                            OnSelect: =Select(Parent)
+                            PaddingBottom: =16
+                            PaddingLeft: =16
+                            PaddingRight: =16
+                            PaddingTop: =16
+                            Tooltip: ="Exibir detalhes do item"
+                            Width: =50
+                            X: =373
+                            Y: =17
+                            ZIndex: =3
+
+                        Rectangle2 As rectangle:
+                            BorderColor: =App.Theme.Colors.Darker40
+                            Fill: |-
+                                =ColorValue("#FFC700")
+                            Height: =Parent.TemplateHeight
+                            OnSelect: =Select(Parent)
+                            Visible: =ThisItem.IsSelected
+                            Width: =4
+                            ZIndex: =5
+
+                        Icon2 As icon.ArrowDown:
+                            BorderColor: =App.Theme.Colors.Darker40
+                            Color: |-
+                                =If(ThisItem.IsSelected, ColorValue("#FFC700"), ColorValue("#BDBDBD"))
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledColor: =RGBA(244, 244, 244, 1)
+                            DisplayMode: =DisplayMode.View
+                            Height: =36
+                            OnSelect: =Select(Parent)
+                            Width: =Parent.TemplateWidth
+                            Y: =94
+                            ZIndex: =6
+
+                    Icon3 As Ícone:
+                        DisplayMode: =DisplayMode.Edit
+                        FillPortions: =0.1
+                        Height: =32
+                        Icon: ="CheckmarkCircle"
+                        IconColor: =RGBA(54, 176, 75, 1)
+                        IconStyle: ='Icon.IconStyle'.Filled
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =32
+                        Visible: =true
+                        Width: =Parent.Width
+                        X: =0
+                        Y: =0
+                        ZIndex: =3
+
+        visualizacoes As groupContainer.horizontalAutoLayoutContainer:
+            Height: =100
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: |
+                =
+            LayoutMode: =LayoutMode.Auto
+            PaddingBottom: =20
+            PaddingLeft: =20
+            PaddingRight: =20
+            PaddingTop: =20
+            RadiusBottomLeft: =
+            RadiusBottomRight: =
+            RadiusTopLeft: =
+            RadiusTopRight: =
+            Width: =1920
+            ZIndex: =2
+
+            Canvas1_1 As fluidGrid.fluidGridWithBlankCard:
+                BorderThickness: =0
+                Height: =Parent.Height - Self.Y
+                LayoutMinHeight: =250
+                LayoutMinWidth: =100
+                Width: =Parent.Width
+                Y: =RectQuickActionBar1.Y + RectQuickActionBar1.Height
+                ZIndex: =5
+
+                DataCard2 As dataCard.blankCard:
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    BorderStyle: =BorderStyle.Solid
+                    DisplayMode: =DisplayMode.Edit
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =59
+                    Width: =1437
+                    X: =0
+                    Y: =0
+                    ZIndex: =1
+
+                    TextCanvas7 As Texto:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =Parent.Height
+                        Size: =32
+                        Text: |-
+                            ="Título: " & Gallery1.Selected.Titulo
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =Parent.Width
+                        X: =0
+                        Y: =0
+                        ZIndex: =1
+
+                DataCard3 As dataCard.blankCard:
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    BorderStyle: =BorderStyle.Solid
+                    DisplayMode: =DisplayMode.Edit
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =60
+                    Width: =1437
+                    X: =0
+                    Y: =1
+                    ZIndex: =2
+
+                    TextCanvas8 As Texto:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        Size: =20
+                        Text: =Gallery1.Selected.Descricao
+                        Width: =Parent.Width
+                        X: =0
+                        Y: =0
+                        ZIndex: =1
+
+                DataCard4 As dataCard.blankCard:
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    BorderStyle: =BorderStyle.Solid
+                    DisplayMode: =DisplayMode.Edit
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =773
+                    Width: =1437
+                    X: =0
+                    Y: =2
+                    ZIndex: =3
+
+                    Video2 As videoPlayback:
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Fill: =Color.Black
+                        Height: =773
+                        Width: =1434
+                        X: =3
+                        ZIndex: =1
+
+                DataCard5 As dataCard.blankCard:
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    BorderStyle: =BorderStyle.Solid
+                    DisplayMode: =DisplayMode.Edit
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =224
+                    Width: =1437
+                    WidthFit: =false
+                    X: =0
+                    Y: =3
+                    ZIndex: =4
+
+                    TextCanvas9 As Texto:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =Parent.Height
+                        Size: =20
+                        Text: |-
+                            ="Resumo: 
+                            " & Gallery1.Selected.Resumo
+                        Width: =Parent.Width
+                        X: =0
+                        Y: =0
+                        ZIndex: =1
+
+                DataCard6 As dataCard.blankCard:
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    BorderStyle: =BorderStyle.Solid
+                    DisplayMode: =DisplayMode.Edit
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =100
+                    Width: =1437
+                    X: =0
+                    Y: =4
+                    ZIndex: =5
+
+                    ButtonCanvas2 As Botão:
+                        Appearance: ='ButtonCanvas.Appearance'.Primary
+                        BasePaletteColor: =RGBA(5, 102, 178, 1)
+                        DisplayMode: =DisplayMode.Edit
+                        FontSize: =18
+                        Height: =35
+                        OnSelect: =Navigate(Teste)
+                        Text: ="Iniciar certificação"
+                        Width: =245
+                        X: =1172
+                        Y: =36
+                        ZIndex: =1
+
