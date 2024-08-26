@@ -1,0 +1,236 @@
+"Teste As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    Fill: =Color.White
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+
+    RectQuickActionBar1 As rectangle:
+        BorderColor: =App.Theme.Colors.Darker40
+        Fill: =App.Theme.Colors.Primary
+        Height: =88
+        Width: =Parent.Width
+        ZIndex: =1
+
+    LblAppName1 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(2, 41, 86, 1)
+        Font: =App.Theme.Font
+        Height: =88
+        Size: =20
+        Text: ="Teste o que aprendeu"
+        Width: =Parent.Width
+        ZIndex: =2
+
+    Canvas1 As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =Parent.Height - Self.Y
+        Width: =Parent.Width
+        Y: =RectQuickActionBar1.Y + RectQuickActionBar1.Height
+        ZIndex: =3
+
+        DataCard1 As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =823
+            Width: =Parent.Width
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            "Gallery3 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
+                BorderColor: =App.Theme.Colors.Darker40
+                DelayItemLoading: =true
+                Height: =769
+                Items: =Filter(Provas, NomeCurso = Gallery1.Selected.Titulo)
+                Layout: =Layout.Vertical
+                LoadingSpinner: =LoadingSpinner.Data
+                TemplatePadding: =0
+                TemplateSize: =238
+                Width: =1869
+                X: =31
+                Y: =30
+                ZIndex: =1
+
+                Title5 As label:
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Font: =App.Theme.Font
+                    FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                    Height: =Self.Size * 1.8
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =24
+                    Text: |-
+                        ="Pergunta: " & ThisItem.Pergunta
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =Parent.TemplateWidth - 86
+                    X: =4
+                    Y: =12
+                    ZIndex: =1
+
+                "A As 'Caixa de Seleção'":
+                    CheckboxSize: =20
+                    DisplayMode: =If(B.Checked || C.Checked || D.Checked, DisplayMode.View, DisplayMode.Edit)
+                    FontSize: |
+                        =20
+                    Height: =40
+                    Label: =ThisItem.AlternativaA
+                    OnCheck: =If(ThisItem.AlternativaA = ThisItem.AlternativaCorreta,Set(varResposta,"correto"))
+                    OnUncheck: =false
+                    Width: =1386
+                    X: =0
+                    Y: =72
+                    ZIndex: =6
+
+                "B As 'Caixa de Seleção'":
+                    CheckboxSize: =20
+                    DisplayMode: =If(A.Checked || C.Checked || D.Checked, DisplayMode.View, DisplayMode.Edit)
+                    FontSize: |
+                        =20
+                    Height: =40
+                    Label: =ThisItem.AlternativaB
+                    OnCheck: =If(ThisItem.AlternativaB = ThisItem.AlternativaCorreta,Set(varResposta,"correto"))
+                    OnUncheck: =false
+                    Width: =1386
+                    X: =0
+                    Y: =112
+                    ZIndex: =7
+
+                "C As 'Caixa de Seleção'":
+                    CheckboxSize: =20
+                    DisplayMode: =If(B.Checked || A.Checked || D.Checked, DisplayMode.View, DisplayMode.Edit)
+                    FontSize: |
+                        =20
+                    Height: =40
+                    Label: =ThisItem.AlternativaC
+                    OnCheck: =If(ThisItem.AlternativaC = ThisItem.AlternativaCorreta,Set(varResposta,"correto"))
+                    OnUncheck: =false
+                    Width: =1386
+                    X: =0
+                    Y: =152
+                    ZIndex: =8
+
+                "D As 'Caixa de Seleção'":
+                    BasePaletteColor: =
+                    CheckboxSize: =20
+                    DisplayMode: =If(B.Checked || C.Checked || A.Checked, DisplayMode.View, DisplayMode.Edit)
+                    FontSize: |
+                        =20
+                    FontWeight: =FontWeight.Normal
+                    Height: =40
+                    Label: =ThisItem.AlternativaD
+                    OnCheck: =If(ThisItem.AlternativaD = ThisItem.AlternativaCorreta,Set(varResposta,"correto"))
+                    OnUncheck: =false
+                    Width: =1386
+                    X: =0
+                    Y: =192
+                    ZIndex: =9
+
+                Title5_1 As label:
+                    Color: =RGBA(139, 154, 159, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Font: =App.Theme.Font
+                    FontWeight: =FontWeight.Semibold
+                    Height: =43
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =18
+                    Text: |-
+                        ="Vale : " & 
+                        
+                        If(Gallery3.AllItemsCount = 0, Text(100/1, "##,00"), Text(100/Gallery3.AllItemsCount, "##,00"))
+                        
+                        
+                        & "%"
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =160
+                    X: =1707
+                    Y: =12
+                    ZIndex: =10
+
+                aux_alternativa As label:
+                    Color: =RGBA(255, 255, 255, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Font: =App.Theme.Font
+                    FontWeight: =FontWeight.Semibold
+                    Height: =43
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =18
+                    Text: |-
+                        =If(A.Checked, ThisItem.AlternativaA,
+                            If(B.Checked, ThisItem.AlternativaB,
+                                If(C.Checked, ThisItem.AlternativaC,
+                                    If(D.Checked, ThisItem.AlternativaD
+                                    )
+                                )
+                            )
+                        )
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =160
+                    X: =1707
+                    Y: =55
+                    ZIndex: =11
+
+        DataCard7 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =115
+            Width: =1920
+            X: =0
+            Y: =1
+            ZIndex: =2
+
+            ButtonCanvas4 As Botão:
+                BasePaletteColor: =
+                DisplayMode: =DisplayMode.Edit
+                FontSize: |
+                    =18
+                Height: =32
+                OnSelect: |-
+                    =ClearCollect(pontos_linhas, {linha: ""});
+                    
+                    ForAll(Gallery3.AllItems,
+                        If(ThisRecord.AlternativaCorreta = aux_alternativa.Text, Collect(pontos_linhas, {linha: aux_alternativa.Text})
+                        )
+                    );
+                    
+                    
+                    
+                    Set(pontuacao, CountRows(pontos_linhas) - 1);
+                    
+                    Set(pct_total, pontuacao/ Gallery3.AllItemsCount);
+                    
+                    Navigate('Pos teste')
+                Text: ="Finalizar"
+                Width: =171
+                X: =974
+                Y: =39
+                ZIndex: =1
+
+            ButtonCanvas5 As Botão:
+                BasePaletteColor: =RGBA(249, 83, 109, 1)
+                DisplayMode: =DisplayMode.Edit
+                FontSize: =18
+                Height: =32
+                OnSelect: =Navigate('Tela de cursos')
+                Text: ="Voltar"
+                Width: =171
+                X: =756
+                Y: =39
+                ZIndex: =2
+

@@ -1,0 +1,144 @@
+App As appinfo:
+    BackEnabled: =true
+    OnStart: |
+        =ClearCollect(
+            Usuarios,
+            {
+                Nome: "Nome teste",
+                Email: "Email teste",
+                Cargo: "Cargo teste",
+                Area: "Area teste"
+            }
+        );
+        
+        ClearCollect(
+            Cursos,
+            {
+                Titulo: "Introdução ao Power Apps",
+                Descricao: "Um curso básico sobre como usar o Power Apps para criar aplicativos personalizados.",
+                Link: "https://example.com/introducao-powerapps",
+                Resumo: "Aprenda os fundamentos do Power Apps, desde a criação de aplicativos até a integração com fontes de dados."
+            },
+            {
+                Titulo: "Desenvolvimento Avançado no Power Apps",
+                Descricao: "Curso avançado sobre técnicas e práticas para desenvolvimento no Power Apps.",
+                Link: "https://example.com/desenvolvimento-avancado",
+                Resumo: "Explore técnicas avançadas, melhores práticas e estratégias para criar aplicativos mais complexos e eficientes no Power Apps."
+            },
+            {
+                Titulo: "Automatização com Power Automate",
+                Descricao: "Curso sobre como usar o Power Automate para criar fluxos de trabalho automatizados.",
+                Link: "https://example.com/automizacao-powerautomate",
+                Resumo: "Aprenda a criar e gerenciar fluxos de trabalho automatizados para melhorar a eficiência dos seus processos."
+            },
+            {
+                Titulo: "Fundamentos de Excel",
+                Descricao: "Curso introdutório sobre as funcionalidades básicas do Microsoft Excel.",
+                Link: "https://example.com/fundamentos-excel",
+                Resumo: "Aprenda a usar funções básicas; formatação e criação de gráficos no Excel."
+            },
+            {
+                Titulo: "Programação em Python para Iniciantes",
+                Descricao: "Curso para aprender a programar em Python, ideal para quem está começando.",
+                Link: "https://example.com/programacao-python",
+                Resumo: "Introdução ao Python, cobrindo sintaxe básica, estruturas de dados e primeiros projetos de programação."
+            },
+            {
+                Titulo: "Gestão de Projetos com Microsoft Project",
+                Descricao: "Curso sobre como usar o Microsoft Project para gerenciar e planejar projetos.",
+                Link: "https://example.com/gestao-projetos",
+                Resumo: "Aprenda a criar cronogramas, alocar recursos e monitorar o progresso de projetos usando o Microsoft Project."
+            },
+            {
+                Titulo: "Design de Interfaces com Figma",
+                Descricao: "Curso sobre design de interfaces e protótipos usando a ferramenta Figma.",
+                Link: "https://example.com/design-figma",
+                Resumo: "Descubra como criar designs modernos e interativos para web e aplicativos usando o Figma."
+            }
+        );
+        
+        // Cria a coleção 'Provas' e adiciona alguns itens com as perguntas e alternativas especificadas
+        ClearCollect(
+            Provas,
+            {
+                NomeCurso: "Introdução ao Power Apps",
+                Pergunta: "Qual é a função principal do Power Apps?",
+                AlternativaA: "Criar aplicativos de desktop",
+                AlternativaB: "Desenvolver websites",
+                AlternativaC: "Criar aplicativos personalizados sem código",
+                AlternativaD: "Gerenciar banco de dados",
+                AlternativaCorreta: "Criar aplicativos personalizados sem código"
+            },
+            {
+                NomeCurso: "Desenvolvimento Avançado no Power Apps",
+                Pergunta: "Qual recurso avançado permite a personalização extensiva no Power Apps?",
+                AlternativaA: "Power Automate",
+                AlternativaB: "Power Virtual Agents",
+                AlternativaC: "Custom Connectors",
+                AlternativaD: "Power BI",
+                AlternativaCorreta: "Custom Connectors"
+            },
+            {
+                NomeCurso: "Automatização com Power Automate",
+                Pergunta: "Qual é o propósito principal do Power Automate?",
+                AlternativaA: "Desenvolver aplicativos móveis",
+                AlternativaB: "Automatizar fluxos de trabalho",
+                AlternativaC: "Criar relatórios analíticos",
+                AlternativaD: "Gerenciar projetos",
+                AlternativaCorreta: "Automatizar fluxos de trabalho"
+            },
+            {
+                NomeCurso: "Fundamentos de Excel",
+                Pergunta: "Qual fórmula é usada para somar uma série de números no Excel?",
+                AlternativaA: "AVERAGE()",
+                AlternativaB: "SUM()",
+                AlternativaC: "COUNT()",
+                AlternativaD: "IF()",
+                AlternativaCorreta: "SUM()"
+            },
+            {
+                NomeCurso: "Fundamentos de Excel",
+                Pergunta: "Qual fórmula é usada para obter a média de números no Excel?",
+                AlternativaA: "AVERAGE()",
+                AlternativaB: "SUM()",
+                AlternativaC: "COUNT()",
+                AlternativaD: "IF()",
+                AlternativaCorreta: "AVERAGE()"
+            },
+            {
+                NomeCurso: "Programação em Python para Iniciantes",
+                Pergunta: "Como você define uma função em Python?",
+                AlternativaA: "def minha_funcao():",
+                AlternativaB: "function minha_funcao():",
+                AlternativaC: "create minha_funcao():",
+                AlternativaD: "function minha_funcao",
+                AlternativaCorreta: "def minha_funcao():"
+            },
+            {
+                NomeCurso: "Gestão de Projetos com Microsoft Project",
+                Pergunta: "Qual é a principal vantagem de usar o Microsoft Project para gerenciar projetos?",
+                AlternativaA: "Design gráfico",
+                AlternativaB: "Criação de apresentações",
+                AlternativaC: "Planejamento e acompanhamento de tarefas",
+                AlternativaD: "Desenvolvimento de sites",
+                AlternativaCorreta: "Planejamento e acompanhamento de tarefas"
+            },
+            {
+                NomeCurso: "Design de Interfaces com Figma",
+                Pergunta: "Qual ferramenta no Figma é usada para criar protótipos interativos?",
+                AlternativaA: "Layers",
+                AlternativaB: "Components",
+                AlternativaC: "Prototyping",
+                AlternativaD: "Assets",
+                AlternativaCorreta: "Prototyping"
+            }
+        );
+    Theme: =PowerAppsTheme
+
+    Host As hostControl.DefaultHostControlVariant:
+        OnCancel: =false
+        OnEdit: =false
+        OnNew: =false
+        OnSave: =false
+        OnView: =false
+
