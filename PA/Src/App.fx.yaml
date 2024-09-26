@@ -132,6 +132,56 @@ App As appinfo:
                 AlternativaD: "Assets",
                 AlternativaCorreta: "Prototyping"
             }
+            {
+                NomeCurso: "Design de Interfaces com Figma",
+                Pergunta: "Qual é a função das 'Frames' no Figma?",
+                AlternativaA: "Criar camadas de texto",
+                AlternativaB: "Agrupar elementos em um design",
+                AlternativaC: "Definir a estrutura e o layout de uma tela",
+                AlternativaD: "Aplicar efeitos de sombra",
+                AlternativaCorreta: "Definir a estrutura e o layout de uma tela"
+            },
+        
+            {
+                NomeCurso: "Design de Interfaces com Figma",
+                Pergunta: "Como você pode compartilhar um protótipo no Figma com outras pessoas?",
+                AlternativaA: "Exportando como imagem",
+                AlternativaB: "Gerando um link de compartilhamento",
+                AlternativaC: "Enviando por e-mail",
+                AlternativaD: "Imprimindo o protótipo",
+                AlternativaCorreta: "Gerando um link de compartilhamento"
+            },
+        
+            {
+                NomeCurso: "Design de Interfaces com Figma",
+                Pergunta: "Qual recurso do Figma permite a colaboração em tempo real?",
+                AlternativaA: "Version History",
+                AlternativaB: "Comments",
+                AlternativaC: "Live Collaboration",
+                AlternativaD: "Presentation Mode",
+                AlternativaCorreta: "Live Collaboration"
+            },
+        
+            {
+                NomeCurso: "Design de Interfaces com Figma",
+                Pergunta: "O que são 'Components' no Figma?",
+                AlternativaA: "Elementos que podem ser duplicados e reutilizados em diferentes telas",
+                AlternativaB: "Efeitos visuais aplicáveis a qualquer elemento",
+                AlternativaC: "Camadas de fundo para designs",
+                AlternativaD: "Somente elementos de texto",
+                AlternativaCorreta: "Elementos que podem ser duplicados e reutilizados em diferentes telas"
+            },
+        
+            {
+                NomeCurso: "Design de Interfaces com Figma",
+                Pergunta: "Qual é a função do 'Design System' no Figma?",
+                AlternativaA: "Criar gráficos animados",
+                AlternativaB: "Definir padrões e diretrizes de design para manter a consistência",
+                AlternativaC: "Exportar designs para outros formatos",
+                AlternativaD: "Gerar relatórios de design",
+                AlternativaCorreta: "Definir padrões e diretrizes de design para manter a consistência"
+            },
+        
         );
     Theme: =PowerAppsTheme
 
