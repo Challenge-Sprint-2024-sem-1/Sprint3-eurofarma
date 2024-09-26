@@ -381,11 +381,13 @@
 
                     Video2 As videoPlayback:
                         BorderColor: =App.Theme.Colors.Darker40
-                        Fill: =Color.Black
+                        DisplayMode: =DisplayMode.View
+                        Fill: =App.Theme.Colors.Primary
                         Height: =773
-                        Width: =1434
-                        X: =3
-                        ZIndex: =1
+                        Media: |
+                            =If(Gallery1.Selected.Titulo = "Fundamentos de Excel", 'video exemplo', SampleVideo)
+                        Width: =1437
+                        ZIndex: =3
 
                 DataCard5 As dataCard.blankCard:
                     BorderColor: =RGBA(0, 0, 0, 1)
