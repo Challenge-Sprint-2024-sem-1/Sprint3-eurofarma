@@ -131,7 +131,7 @@ App As appinfo:
                 AlternativaC: "Prototyping",
                 AlternativaD: "Assets",
                 AlternativaCorreta: "Prototyping"
-            }
+            },
             {
                 NomeCurso: "Design de Interfaces com Figma",
                 Pergunta: "Qual é a função das 'Frames' no Figma?",
