@@ -182,13 +182,13 @@ App As appinfo:
                 AlternativaCorreta: "Definir padrões e diretrizes de design para manter a consistência"
             },
             {
-            NomeCurso: "Design de Interfaces com Figma",
-            Pergunta: "Qual é a função da 'Auto Layout' no Figma?",
-            AlternativaA: "Ajustar automaticamente o tamanho dos elementos com base no conteúdo",
-            AlternativaB: "Criar animações entre telas",
-            AlternativaC: "Aplicar cores de fundo",
-            AlternativaD: "Adicionar efeitos de transição",
-            AlternativaCorreta: "Ajustar automaticamente o tamanho dos elementos com base no conteúdo"
+                NomeCurso: "Design de Interfaces com Figma",
+                Pergunta: "Qual é a função da 'Auto Layout' no Figma?",
+                AlternativaA: "Ajustar automaticamente o tamanho dos elementos com base no conteúdo",
+                AlternativaB: "Criar animações entre telas",
+                AlternativaC: "Aplicar cores de fundo",
+                AlternativaD: "Adicionar efeitos de transição",
+                AlternativaCorreta: "Ajustar automaticamente o tamanho dos elementos com base no conteúdo"
             },
         
             {
@@ -199,6 +199,25 @@ App As appinfo:
                 AlternativaC: "Copiando e colando o texto manualmente",
                 AlternativaD: "Alterando as configurações de cada elemento individualmente",
                 AlternativaCorreta: "Criando um estilo de texto e aplicando-o aos elementos desejados"
+            },
+            {
+                NomeCurso: "Design de Interfaces com Figma",
+                Pergunta: "Qual é a principal vantagem de usar 'Plugins' no Figma?",
+                AlternativaA: "Adicionar efeitos especiais a imagens",
+                AlternativaB: "Automatizar tarefas e expandir funcionalidades do design",
+                AlternativaC: "Alterar a interface do Figma",
+                AlternativaD: "Criar animações avançadas",
+                AlternativaCorreta: "Automatizar tarefas e expandir funcionalidades do design"
+            },
+        
+            {
+                NomeCurso: "Design de Interfaces com Figma",
+                Pergunta: "O que significa 'Prototipagem' no Figma?",
+                AlternativaA: "Criar uma versão funcional do design que simula a interação do usuário",
+                AlternativaB: "Desenhar apenas o layout sem funcionalidade",
+                AlternativaC: "Aplicar cores e estilos ao design final",
+                AlternativaD: "Exportar o design para desenvolvimento",
+                AlternativaCorreta: "Criar uma versão funcional do design que simula a interação do usuário"
             }
         );
     Theme: =PowerAppsTheme
