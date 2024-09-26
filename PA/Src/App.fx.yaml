@@ -181,7 +181,25 @@ App As appinfo:
                 AlternativaD: "Gerar relatórios de design",
                 AlternativaCorreta: "Definir padrões e diretrizes de design para manter a consistência"
             },
+            {
+            NomeCurso: "Design de Interfaces com Figma",
+            Pergunta: "Qual é a função da 'Auto Layout' no Figma?",
+            AlternativaA: "Ajustar automaticamente o tamanho dos elementos com base no conteúdo",
+            AlternativaB: "Criar animações entre telas",
+            AlternativaC: "Aplicar cores de fundo",
+            AlternativaD: "Adicionar efeitos de transição",
+            AlternativaCorreta: "Ajustar automaticamente o tamanho dos elementos com base no conteúdo"
+            },
         
+            {
+                NomeCurso: "Design de Interfaces com Figma",
+                Pergunta: "Como você pode aplicar um estilo de texto a vários elementos no Figma?",
+                AlternativaA: "Utilizando a ferramenta de pipeta",
+                AlternativaB: "Criando um estilo de texto e aplicando-o aos elementos desejados",
+                AlternativaC: "Copiando e colando o texto manualmente",
+                AlternativaD: "Alterando as configurações de cada elemento individualmente",
+                AlternativaCorreta: "Criando um estilo de texto e aplicando-o aos elementos desejados"
+            }
         );
     Theme: =PowerAppsTheme
 
