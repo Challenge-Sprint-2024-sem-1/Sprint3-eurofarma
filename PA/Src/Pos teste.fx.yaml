@@ -77,7 +77,13 @@
         DisplayMode: =DisplayMode.Edit
         FontSize: =18
         Height: =37
-        OnSelect: =Navigate('Tela de cursos')
+        OnSelect: |-
+            =Navigate('Tela de cursos');
+            
+            Reset(A);
+            Reset(B);
+            Reset(C);
+            Reset(D);
         Text: ="Voltar aos cursos"
         Width: =241
         X: =839
