@@ -384,8 +384,7 @@
                         DisplayMode: =DisplayMode.View
                         Fill: =App.Theme.Colors.Primary
                         Height: =773
-                        Media: |
-                            =If(Gallery1.Selected.Titulo = "Fundamentos de Excel", 'video exemplo', SampleVideo)
+                        Media: =If(Gallery1.Selected.Titulo = "Fundamentos de Excel", 'video exemplo', SampleVideo)
                         Width: =1437
                         ZIndex: =3
 
