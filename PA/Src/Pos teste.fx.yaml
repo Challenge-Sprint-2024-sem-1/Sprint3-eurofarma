@@ -80,10 +80,7 @@
         OnSelect: |-
             =Navigate('Tela de cursos');
             
-            Reset(A);
-            Reset(B);
-            Reset(C);
-            Reset(D);
+            Reset(Gallery1)
         Text: ="Voltar aos cursos"
         Width: =241
         X: =839
