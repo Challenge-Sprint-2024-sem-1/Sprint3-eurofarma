@@ -215,7 +215,7 @@
                     
                     Set(pct_total, pontuacao/ Gallery3.AllItemsCount);
                     
-                    Navigate('Pos teste')
+                    Navigate('Pos teste');
                 Text: ="Finalizar"
                 Width: =171
                 X: =974
