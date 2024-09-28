@@ -396,7 +396,7 @@
                         BorderRadiusTopLeft: =20
                         BorderRadiusTopRight: =20
                         DisplayMode: |+
-                            =If(Email.Value <> First(Usuarios).Email, DisplayMode.Disabled, DisplayMode.Edit)
+                            =If(IsBlank(Email.Value), DisplayMode.Disabled, DisplayMode.Edit)
                             
                             
                         FillPortions: =0.5
@@ -405,7 +405,11 @@
                         Height: =Parent.Height - 50
                         LayoutMinHeight: =32
                         LayoutMinWidth: =96
-                        OnSelect: =Navigate('Tela de cursos')
+                        OnSelect: |-
+                            =LookUp(Usuarios, [@Email].Value = Email, true);
+                            
+                            If(LookUp(Usuarios, [@Email].Value = Email, true),
+                            Navigate('Tela de cursos'), Notify("Seu usuário não foi encontrado na base de dados", NotificationType.Error))
                         Text: ="Avançar"
                         Width: =96
                         X: =0

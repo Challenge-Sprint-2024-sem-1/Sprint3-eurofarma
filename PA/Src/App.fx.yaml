@@ -8,6 +8,12 @@ App As appinfo:
                 Email: "Email teste",
                 Cargo: "Cargo teste",
                 Area: "Area teste"
+            },
+            {
+                Nome: User().FullName,
+                Email: User().Email,
+                Cargo: "Analista de Negócios",
+                Area: "Governança Corporativa"
             }
         );
         
