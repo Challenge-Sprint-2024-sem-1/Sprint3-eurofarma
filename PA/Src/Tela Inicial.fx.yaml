@@ -270,7 +270,7 @@
                     LayoutMinHeight: =32
                     LayoutMinWidth: =96
                     Size: =40
-                    Text: ="Validação de Entrada"
+                    Text: ="Validação de Entrada" 
                     Width: |
                         =Parent.Width - 100
                     X: =0
@@ -406,8 +406,7 @@
                         LayoutMinHeight: =32
                         LayoutMinWidth: =96
                         OnSelect: |-
-                            =LookUp(Usuarios, [@Email].Value = Email, true);
-                            
+                            =//LookUp(Usuarios; [@Email].Value = Email; true);;
                             If(LookUp(Usuarios, [@Email].Value = Email, true),
                             Navigate('Tela de cursos'), Notify("Seu usuário não foi encontrado na base de dados", NotificationType.Error))
                         Text: ="Avançar"

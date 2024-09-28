@@ -1,6 +1,7 @@
 "Teste As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
     Fill: =Color.White
     LoadingSpinnerColor: =App.Theme.Colors.Primary
+    OnVisible: =
 
     RectQuickActionBar1 As rectangle:
         BorderColor: =App.Theme.Colors.Darker40
@@ -76,6 +77,7 @@
 
                 "A As 'Caixa de Seleção'":
                     CheckboxSize: =20
+                    Checked: =checked
                     DisplayMode: =If(B.Checked || C.Checked || D.Checked, DisplayMode.View, DisplayMode.Edit)
                     FontSize: |
                         =20
@@ -90,6 +92,7 @@
 
                 "B As 'Caixa de Seleção'":
                     CheckboxSize: =20
+                    Checked: =checked
                     DisplayMode: =If(A.Checked || C.Checked || D.Checked, DisplayMode.View, DisplayMode.Edit)
                     FontSize: |
                         =20
@@ -104,6 +107,7 @@
 
                 "C As 'Caixa de Seleção'":
                     CheckboxSize: =20
+                    Checked: =checked
                     DisplayMode: =If(B.Checked || A.Checked || D.Checked, DisplayMode.View, DisplayMode.Edit)
                     FontSize: |
                         =20
@@ -119,6 +123,7 @@
                 "D As 'Caixa de Seleção'":
                     BasePaletteColor: =
                     CheckboxSize: =20
+                    Checked: =checked
                     DisplayMode: =If(B.Checked || C.Checked || A.Checked, DisplayMode.View, DisplayMode.Edit)
                     FontSize: |
                         =20
