@@ -8,6 +8,12 @@ App As appinfo:
                 Email: "Email teste",
                 Cargo: "Cargo teste",
                 Area: "Area teste"
+            },
+            {
+                Nome: User().FullName,
+                Email: User().Email,
+                Cargo: "Analista de Negócios",
+                Area: "Governança Corporativa"
             }
         );
         
@@ -53,7 +59,49 @@ App As appinfo:
                 Titulo: "Design de Interfaces com Figma",
                 Descricao: "Curso sobre design de interfaces e protótipos usando a ferramenta Figma.",
                 Link: "https://example.com/design-figma",
-                Resumo: "Descubra como criar designs modernos e interativos para web e aplicativos usando o Figma."
+                Resumo: "Curso: Design de Interfaces com Figma
+        
+        Descrição do Curso:
+        Neste curso, você aprenderá a criar interfaces de usuário atraentes e funcionais usando o Figma, uma ferramenta popular para design colaborativo.
+        
+        Objetivos do Curso:
+        - Compreender os princípios do design de interfaces.
+        - Usar o Figma de forma eficaz.
+        - Criar protótipos interativos e testar a usabilidade.
+        - Aplicar técnicas de design responsivo.
+        - Colaborar em equipe e apresentar projetos.
+        
+        Conteúdo Programático:
+        1. Introdução ao Design de Interfaces
+           - Definição e princípios do design centrado no usuário.
+           - Estudos de casos de sucesso.
+        
+        2. Fundamentos do Figma
+           - Criação de conta e configuração.
+           - Navegação pela interface e ferramentas básicas.
+        
+        3. Componentes e Estilos
+           - Criando componentes reutilizáveis.
+           - Aplicação de estilos (cores, tipografia, espaçamentos).
+        
+        4. Prototipagem Interativa
+           - Criação de protótipos interativos.
+           - Transições e animações.
+        
+        5. Colaboração e Apresentação
+           - Funcionalidades de colaboração em tempo real.
+           - Como compartilhar e apresentar projetos.
+        
+        6. Tendências em Design de Interfaces
+           - Últimas tendências e melhores práticas.
+           - Design inclusivo e acessibilidade.
+        
+        Público-Alvo:
+        Ideal para iniciantes e designers que desejam aprimorar suas habilidades no Figma.
+        
+        Metodologia:
+        Teoria e prática, com exercícios, projetos em grupo e feedback constante. Os alunos terão um portfólio ao final do curso.
+        "
             }
         );
         
@@ -131,6 +179,93 @@ App As appinfo:
                 AlternativaC: "Prototyping",
                 AlternativaD: "Assets",
                 AlternativaCorreta: "Prototyping"
+            },
+            {
+                NomeCurso: "Design de Interfaces com Figma",
+                Pergunta: "Qual é a função das 'Frames' no Figma?",
+                AlternativaA: "Criar camadas de texto",
+                AlternativaB: "Agrupar elementos em um design",
+                AlternativaC: "Definir a estrutura e o layout de uma tela",
+                AlternativaD: "Aplicar efeitos de sombra",
+                AlternativaCorreta: "Definir a estrutura e o layout de uma tela"
+            },
+        
+            {
+                NomeCurso: "Design de Interfaces com Figma",
+                Pergunta: "Como você pode compartilhar um protótipo no Figma com outras pessoas?",
+                AlternativaA: "Exportando como imagem",
+                AlternativaB: "Gerando um link de compartilhamento",
+                AlternativaC: "Enviando por e-mail",
+                AlternativaD: "Imprimindo o protótipo",
+                AlternativaCorreta: "Gerando um link de compartilhamento"
+            },
+        
+            {
+                NomeCurso: "Design de Interfaces com Figma",
+                Pergunta: "Qual recurso do Figma permite a colaboração em tempo real?",
+                AlternativaA: "Version History",
+                AlternativaB: "Comments",
+                AlternativaC: "Live Collaboration",
+                AlternativaD: "Presentation Mode",
+                AlternativaCorreta: "Live Collaboration"
+            },
+        
+            {
+                NomeCurso: "Design de Interfaces com Figma",
+                Pergunta: "O que são 'Components' no Figma?",
+                AlternativaA: "Elementos que podem ser duplicados e reutilizados em diferentes telas",
+                AlternativaB: "Efeitos visuais aplicáveis a qualquer elemento",
+                AlternativaC: "Camadas de fundo para designs",
+                AlternativaD: "Somente elementos de texto",
+                AlternativaCorreta: "Elementos que podem ser duplicados e reutilizados em diferentes telas"
+            },
+        
+            {
+                NomeCurso: "Design de Interfaces com Figma",
+                Pergunta: "Qual é a função do 'Design System' no Figma?",
+                AlternativaA: "Criar gráficos animados",
+                AlternativaB: "Definir padrões e diretrizes de design para manter a consistência",
+                AlternativaC: "Exportar designs para outros formatos",
+                AlternativaD: "Gerar relatórios de design",
+                AlternativaCorreta: "Definir padrões e diretrizes de design para manter a consistência"
+            },
+            {
+                NomeCurso: "Design de Interfaces com Figma",
+                Pergunta: "Qual é a função da 'Auto Layout' no Figma?",
+                AlternativaA: "Ajustar automaticamente o tamanho dos elementos com base no conteúdo",
+                AlternativaB: "Criar animações entre telas",
+                AlternativaC: "Aplicar cores de fundo",
+                AlternativaD: "Adicionar efeitos de transição",
+                AlternativaCorreta: "Ajustar automaticamente o tamanho dos elementos com base no conteúdo"
+            },
+        
+            {
+                NomeCurso: "Design de Interfaces com Figma",
+                Pergunta: "Como você pode aplicar um estilo de texto a vários elementos no Figma?",
+                AlternativaA: "Utilizando a ferramenta de pipeta",
+                AlternativaB: "Criando um estilo de texto e aplicando-o aos elementos desejados",
+                AlternativaC: "Copiando e colando o texto manualmente",
+                AlternativaD: "Alterando as configurações de cada elemento individualmente",
+                AlternativaCorreta: "Criando um estilo de texto e aplicando-o aos elementos desejados"
+            },
+            {
+                NomeCurso: "Design de Interfaces com Figma",
+                Pergunta: "Qual é a principal vantagem de usar 'Plugins' no Figma?",
+                AlternativaA: "Adicionar efeitos especiais a imagens",
+                AlternativaB: "Automatizar tarefas e expandir funcionalidades do design",
+                AlternativaC: "Alterar a interface do Figma",
+                AlternativaD: "Criar animações avançadas",
+                AlternativaCorreta: "Automatizar tarefas e expandir funcionalidades do design"
+            },
+        
+            {
+                NomeCurso: "Design de Interfaces com Figma",
+                Pergunta: "O que significa 'Prototipagem' no Figma?",
+                AlternativaA: "Criar uma versão funcional do design que simula a interação do usuário",
+                AlternativaB: "Desenhar apenas o layout sem funcionalidade",
+                AlternativaC: "Aplicar cores e estilos ao design final",
+                AlternativaD: "Exportar o design para desenvolvimento",
+                AlternativaCorreta: "Criar uma versão funcional do design que simula a interação do usuário"
             }
         );
     Theme: =PowerAppsTheme

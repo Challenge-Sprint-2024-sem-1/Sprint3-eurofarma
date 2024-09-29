@@ -13,6 +13,7 @@
         ZIndex: =2
 
         barra_lateral As groupContainer.horizontalAutoLayoutContainer:
+            Fill: =RGBA(20, 93, 160, 1)
             FillPortions: =0.3
             Height: =1080
             LayoutDirection: =LayoutDirection.Vertical
@@ -27,7 +28,7 @@
             ZIndex: =1
 
             Conteudo_1 As groupContainer.horizontalAutoLayoutContainer:
-                Fill: =RGBA(2, 41, 86, 1)
+                Fill: =RGBA(20, 93, 160, 1)
                 Height: =100
                 LayoutDirection: =LayoutDirection.Vertical
                 LayoutMinHeight: =100
@@ -96,8 +97,8 @@
                             Height: =32
                             LayoutMinHeight: =32
                             LayoutMinWidth: =96
-                            Size: =20
-                            Text: =First(Usuarios).Nome
+                            Size: =19
+                            Text: =First(Filter(Usuarios, Email = [@Email].Value)).Nome
                             Width: =96
                             X: =0
                             Y: =0
@@ -121,15 +122,15 @@
                             ZIndex: =2
 
                             TextCanvas4_3 As Texto:
-                                AutoHeight: =true
+                                AutoHeight: =false
                                 DisplayMode: =DisplayMode.Edit
                                 FillPortions: =1
                                 FontColor: =RGBA(255, 255, 255, 1)
                                 Height: =32
-                                LayoutMinHeight: =32
+                                LayoutMinHeight: =50
                                 LayoutMinWidth: =96
-                                Size: =16
-                                Text: =First(Usuarios).Cargo
+                                Size: =15
+                                Text: =First(Filter(Usuarios, Email = [@Email].Value)).Cargo
                                 Width: =96
                                 X: =0
                                 Y: =0
@@ -141,10 +142,10 @@
                                 FillPortions: =1
                                 FontColor: =RGBA(255, 255, 255, 1)
                                 Height: =32
-                                LayoutMinHeight: =32
+                                LayoutMinHeight: =50
                                 LayoutMinWidth: =96
-                                Size: =16
-                                Text: =First(Usuarios).Area
+                                Size: =15
+                                Text: =First(Filter(Usuarios, Email = [@Email].Value)).Area
                                 Width: =96
                                 X: =0
                                 Y: =0
@@ -177,7 +178,7 @@
                         Align: ='TextCanvas.Align'.Center
                         AutoHeight: =true
                         DisplayMode: =DisplayMode.Edit
-                        FontColor: =RGBA(255, 199, 0, 1)
+                        FontColor: =RGBA(255, 255, 255, 1)
                         Height: =50
                         LayoutMinHeight: =32
                         LayoutMinWidth: =96
@@ -240,25 +241,6 @@
                             Y: =37
                             ZIndex: =2
 
-                        NextArrow2 As icon.ChevronRight:
-                            AccessibleLabel: =Self.Tooltip
-                            BorderColor: =App.Theme.Colors.Darker40
-                            Color: =RGBA(166, 166, 166, 1)
-                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                            DisabledColor: =RGBA(244, 244, 244, 1)
-                            Height: =50
-                            Icon: =Icon.ChevronRight
-                            OnSelect: =Select(Parent)
-                            PaddingBottom: =16
-                            PaddingLeft: =16
-                            PaddingRight: =16
-                            PaddingTop: =16
-                            Tooltip: ="Exibir detalhes do item"
-                            Width: =50
-                            X: =373
-                            Y: =17
-                            ZIndex: =3
-
                         Rectangle2 As rectangle:
                             BorderColor: =App.Theme.Colors.Darker40
                             Fill: |-
@@ -315,6 +297,52 @@
             Width: =1920
             ZIndex: =2
 
+            Container1 As groupContainer.horizontalAutoLayoutContainer:
+                FillPortions: =0
+                Height: =50
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =1
+
+                TextCanvas7 As Texto:
+                    DisplayMode: =DisplayMode.Edit
+                    FillPortions: =1
+                    Height: |
+                        =45
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =96
+                    Size: =32
+                    Text: |-
+                        ="Título: " & Gallery1.Selected.Titulo
+                    Weight: ='TextCanvas.Weight'.Semibold
+                    Width: |
+                        =1100
+                    X: =0
+                    Y: =0
+                    ZIndex: =1
+
+                ButtonCanvas2_2 As Botão:
+                    Appearance: ='ButtonCanvas.Appearance'.Primary
+                    BasePaletteColor: =RGBA(20, 93, 160, 1)
+                    DisplayMode: =If(Video2.Time >= Video2.Duration * 0.8, DisplayMode.Edit, DisplayMode.Disabled)
+                    FontSize: =18
+                    Height: =42
+                    Icon: ="ChevronRight"
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =96
+                    OnSelect: |-
+                        =Navigate(Teste);
+                        
+                        Set(checked, false);
+                        
+                        Reset(Video2)
+                    Text: ="Iniciar certificação"
+                    Width: =241
+                    X: =1162
+                    Y: =8
+                    ZIndex: =2
+
             Canvas1_1 As fluidGrid.fluidGridWithBlankCard:
                 BorderThickness: =0
                 Height: =Parent.Height - Self.Y
@@ -322,30 +350,7 @@
                 LayoutMinWidth: =100
                 Width: =Parent.Width
                 Y: =RectQuickActionBar1.Y + RectQuickActionBar1.Height
-                ZIndex: =5
-
-                DataCard2 As dataCard.blankCard:
-                    BorderColor: =RGBA(0, 0, 0, 1)
-                    BorderStyle: =BorderStyle.Solid
-                    DisplayMode: =DisplayMode.Edit
-                    Fill: =RGBA(0, 0, 0, 0)
-                    Height: =59
-                    Width: =1437
-                    X: =0
-                    Y: =0
-                    ZIndex: =1
-
-                    TextCanvas7 As Texto:
-                        DisplayMode: =DisplayMode.Edit
-                        Height: =Parent.Height
-                        Size: =32
-                        Text: |-
-                            ="Título: " & Gallery1.Selected.Titulo
-                        Weight: ='TextCanvas.Weight'.Semibold
-                        Width: =Parent.Width
-                        X: =0
-                        Y: =0
-                        ZIndex: =1
+                ZIndex: =3
 
                 DataCard3 As dataCard.blankCard:
                     BorderColor: =RGBA(0, 0, 0, 1)
@@ -374,25 +379,26 @@
                     DisplayMode: =DisplayMode.Edit
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =773
-                    Width: =1437
+                    Width: =Parent.Width
                     X: =0
                     Y: =2
                     ZIndex: =3
 
                     Video2 As videoPlayback:
                         BorderColor: =App.Theme.Colors.Darker40
-                        Fill: =Color.Black
+                        DisplayMode: =DisplayMode.View
+                        Fill: =Color.White
                         Height: =773
-                        Width: =1434
-                        X: =3
-                        ZIndex: =1
+                        Media: =If(Gallery1.Selected.Titulo = "Design de Interfaces com Figma", 'video exemplo', SampleVideo)
+                        Width: =1437
+                        ZIndex: =3
 
                 DataCard5 As dataCard.blankCard:
                     BorderColor: =RGBA(0, 0, 0, 1)
                     BorderStyle: =BorderStyle.Solid
                     DisplayMode: =DisplayMode.Edit
                     Fill: =RGBA(0, 0, 0, 0)
-                    Height: =224
+                    Height: =500
                     Width: =1437
                     WidthFit: =false
                     X: =0
@@ -401,37 +407,43 @@
 
                     TextCanvas9 As Texto:
                         DisplayMode: =DisplayMode.Edit
-                        Height: =Parent.Height
-                        Size: =20
+                        Height: |
+                            =50
+                        Size: =25
                         Text: |-
-                            ="Resumo: 
-                            " & Gallery1.Selected.Resumo
+                            ="Resumo:"
+                        Weight: ='TextCanvas.Weight'.Semibold
                         Width: =Parent.Width
                         X: =0
-                        Y: =0
-                        ZIndex: =1
+                        Y: =18
+                        ZIndex: =2
 
-                DataCard6 As dataCard.blankCard:
-                    BorderColor: =RGBA(0, 0, 0, 1)
-                    BorderStyle: =BorderStyle.Solid
-                    DisplayMode: =DisplayMode.Edit
-                    Fill: =RGBA(0, 0, 0, 0)
-                    Height: =100
-                    Width: =1437
-                    X: =0
-                    Y: =4
-                    ZIndex: =5
+                    Canvas1_2 As fluidGrid.fluidGridWithBlankCard:
+                        BorderThickness: =0
+                        Height: =432
+                        Width: =Parent.Width
+                        Y: =68
+                        ZIndex: =3
 
-                    ButtonCanvas2 As Botão:
-                        Appearance: ='ButtonCanvas.Appearance'.Primary
-                        BasePaletteColor: =RGBA(5, 102, 178, 1)
-                        DisplayMode: =DisplayMode.Edit
-                        FontSize: =18
-                        Height: =35
-                        OnSelect: =Navigate(Teste)
-                        Text: ="Iniciar certificação"
-                        Width: =245
-                        X: =1172
-                        Y: =36
-                        ZIndex: =1
+                        DataCard2_1 As dataCard.blankCard:
+                            BorderColor: =RGBA(0, 0, 0, 1)
+                            BorderStyle: =BorderStyle.Solid
+                            DisplayMode: =DisplayMode.Edit
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =59
+                            Width: =1437
+                            X: =0
+                            Y: =0
+                            ZIndex: =1
+
+                            TextCanvas9_2 As Texto:
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =500
+                                Size: =20
+                                Text: =Gallery1.Selected.Resumo
+                                VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                                Width: =Parent.Width
+                                X: =0
+                                Y: =0
+                                ZIndex: =2
 
