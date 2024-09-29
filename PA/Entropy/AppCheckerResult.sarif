@@ -614,19 +614,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Tela de cursos'.'Fundo base_2'.visualizacoes.Canvas1_1.DataCard2.ButtonCanvas2_1.AccessibleLabel"
+                  "fullyQualifiedName": "'Tela de cursos'.'Fundo base_2'.visualizacoes.Container1.ButtonCanvas2_2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Tela de cursos'.'Fundo base_2'.visualizacoes.Canvas1_1.DataCard2.ButtonCanvas2_1.AccessibleLabel",
+                  "fullyQualifiedName": "'Tela de cursos'.'Fundo base_2'.visualizacoes.Container1.ButtonCanvas2_2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Tela de cursos",
-                "type": "'Tela de cursos'.'Fundo base_2'.visualizacoes.Canvas1_1.DataCard2.ButtonCanvas2_1"
+                "type": "'Tela de cursos'.'Fundo base_2'.visualizacoes.Container1.ButtonCanvas2_2"
               }
             }
           ],
@@ -638,6 +638,36 @@
           },
           "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.checked"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.checked",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "checked",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 3
         },
         {
           "locations": [

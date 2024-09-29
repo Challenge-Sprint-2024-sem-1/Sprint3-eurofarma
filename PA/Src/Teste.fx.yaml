@@ -77,7 +77,7 @@
 
                 "A As 'Caixa de Seleção'":
                     CheckboxSize: =20
-                    Checked: =checked
+                    Checked: =false
                     DisplayMode: =If(B.Checked || C.Checked || D.Checked, DisplayMode.View, DisplayMode.Edit)
                     FontSize: |
                         =20
@@ -92,7 +92,7 @@
 
                 "B As 'Caixa de Seleção'":
                     CheckboxSize: =20
-                    Checked: =checked
+                    Checked: =false
                     DisplayMode: =If(A.Checked || C.Checked || D.Checked, DisplayMode.View, DisplayMode.Edit)
                     FontSize: |
                         =20
@@ -107,7 +107,7 @@
 
                 "C As 'Caixa de Seleção'":
                     CheckboxSize: =20
-                    Checked: =checked
+                    Checked: =false
                     DisplayMode: =If(B.Checked || A.Checked || D.Checked, DisplayMode.View, DisplayMode.Edit)
                     FontSize: |
                         =20
@@ -123,7 +123,7 @@
                 "D As 'Caixa de Seleção'":
                     BasePaletteColor: =
                     CheckboxSize: =20
-                    Checked: =checked
+                    Checked: =false
                     DisplayMode: =If(B.Checked || C.Checked || A.Checked, DisplayMode.View, DisplayMode.Edit)
                     FontSize: |
                         =20
